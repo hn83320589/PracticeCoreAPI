@@ -3,20 +3,27 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-# User-specific files
+# VS Code 相關檔案
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# 使用者特定檔案
 *.rsuser
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
-
-# User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
 mono_crash.*
 
-# Build results
+# 建置結果
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -32,22 +39,19 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-# Visual Studio 2015/2017 cache/options directory
-.vs/
-# Uncomment if you have tasks that create the project's static files in wwwroot
-#wwwroot/
-
 # Visual Studio 2017 auto generated files
 Generated\ Files/
 
-# MSTest test Results
+# 測試結果
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
-
-# NUnit
-*.VisualState.xml
 TestResult.xml
 nunit-*.xml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.coverage
+*.coveragexml
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
@@ -57,7 +61,7 @@ dlldata.c
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
 
-# .NET Core
+# .NET Core 相關
 project.lock.json
 project.fragment.lock.json
 artifacts/
@@ -194,11 +198,9 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
-# NuGet Packages
+# NuGet 套件
 *.nupkg
-# NuGet Symbol Packages
 *.snupkg
-# The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
@@ -398,3 +400,53 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# .NET Core Web API 特定項目
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Staging.json
+appsettings.*.json
+!appsettings.json
+*.db
+*.db-shm
+*.db-wal
+
+# Swagger 產生的檔案
+/wwwroot/api-docs/
+/wwwroot/swagger/
+
+# Auto-generated files
+*.Generated.cs
+**/GeneratedCode/
+
+# JWT 簽章金鑰
+*.rsa
+*.key
+*.jwk
+
+# 本地開發環境檔案
+.env
+.env.local
+.env.development
+
+# 快取資料
+.httpcache/
+
+# Docker 相關
+docker-compose.override.yml
+**/tempkey.rsa
+
+# 編譯產生檔案
+*.dll
+*.pdb
+*.exe
+
+# 暫存檔案
+*.log
+*.tmp
+*~
+*.bak
+
+# 作業系統產生的檔案
+.DS_Store
+Thumbs.db

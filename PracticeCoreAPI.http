@@ -1,4 +1,4 @@
-@PracticeCoreAPI_HostAddress = http://localhost:5247
+@PracticeCoreAPI_HostAddress = http://localhost:5105
 
 GET {{PracticeCoreAPI_HostAddress}}/weatherforecast/
 Accept: application/json
